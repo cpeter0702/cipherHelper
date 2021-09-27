@@ -158,12 +158,12 @@ public class CipherUtils {
 		return hashStr;
 	}
     
-    public String base64Byte2Str(PrivateKey privateKey, byte[] message) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
+    public String base64Byte2Str(byte[] message) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
         return Base64.encodeBase64String(message);
     }
     
 
-    public byte[] base64Str2Byte(PublicKey publicKey, byte[] message, String signature) throws SignatureException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException {
+    public byte[] base64Str2Byte(String signature) throws SignatureException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException {
         return Base64.decodeBase64(signature.getBytes("UTF-8"));
     }
 
